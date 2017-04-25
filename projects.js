@@ -3,8 +3,16 @@ if (!window.indexedDB) {
 }
 
 var db;
-var request = window.indexedDB.open("BashboredTasksDB", 1);
+var request = window.indexedDB.open("BashboredTasksDB", 2);
 
+request.onupgradeneeded = function(event)
+{
+  db = event.targt.result;
+
+  var objectStore = db.createObjectStore("projectsStore", {keyPath: "project_id"});
+
+  window.alert("Database schema upgraded to version 2.");
+};
 request.onerror = function(event) {
   window.alert("Error opening database.");
 };
