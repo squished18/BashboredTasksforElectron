@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <title>Bashbored Tasks</title>
   </head>
-  <body>
+  <body onload="BodyLoaded()">
     <h1>Hello World!</h1>
     We are using node <script>document.write(process.versions.node)</script>,
     Chrome <script>document.write(process.versions.chrome)</script>,
     and Electron <script>document.write(process.versions.electron)</script>.
+
+    <div id="projects_list"></div>
 
     <script src="projects.js"></script>
   </body>

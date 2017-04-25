@@ -20,3 +20,8 @@ request.onsuccess = function(event) {
   window.alert("Database opened successfully.");
   db = event.target.result;
 };
+
+function BodyLoaded()
+{
+  window.alert("BodyLoaded");
+};
