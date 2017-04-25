@@ -7,7 +7,7 @@ var request = window.indexedDB.open("BashboredTasksDB", 2);
 
 request.onupgradeneeded = function(event)
 {
-  db = event.targt.result;
+  db = event.target.result;
 
   var objectStore = db.createObjectStore("projectsStore", {keyPath: "project_id"});
 
